@@ -18,7 +18,8 @@ namespace Notes.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllNotes()
         {
-            return Ok(await notesDbContext.Notes.ToListAsync());
+            var result = await notesDbContext.Notes.ToListAsync();
+            return Ok(result);
         }
 
         [HttpGet]
@@ -75,8 +76,5 @@ namespace Notes.API.Controllers
             await notesDbContext.SaveChangesAsync();
             return Ok();
         }
-
-
-
     }
 }
