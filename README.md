@@ -1,6 +1,6 @@
 # Notes.API
 
-Server side of full stack application, client side [here](https://github.com/Egxr41k/Notes.UI/)
+The server side of the full-stack application, client-side [here](https://github.com/Egxr41k/Notes.UI/)
 
 used C#, ASP.NET, Entity Framework
 
@@ -10,7 +10,7 @@ used C#, ASP.NET, Entity Framework
 1. ~~Base CRUD-methods~~
 2. ~~Publish to Azure~~
 3. Add regestration/autorzation.
-4. Add "share note" method, that well generate unique link for each notes
+4. Add a "share note" method, that will generate a unique link for each note
 
 ### CRUD operation realization
 
@@ -46,6 +46,8 @@ public async Task<IActionResult> GetNoteById([FromRoute] Guid id)
 Update:
 
 ```csharp
+[HttpPut]
+[Route("{id:Guid}")]
 public async Task<IActionResult> UpdateNote([FromRoute] Guid id, [FromBody] Note updatedNote)
 {
 	var existingNote = await notesDbContext.Notes.FindAsync(id);
