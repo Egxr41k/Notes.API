@@ -1,6 +1,6 @@
 # Notes.API
-
-The server side of the full-stack application, client-side [here](https://github.com/Egxr41k/Notes.UI/)
+This note manager allows you to add, edit, delete, share your notes, and open other people's notes via links. You can only read notes that you have not created.
+Server-side of the full-stack application, client-side [here](https://github.com/Egxr41k/Notes.UI/)
 
 used C#, ASP.NET, Entity Framework
 
